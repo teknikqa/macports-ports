@@ -1,19 +1,19 @@
-# macports-upkeep
+# macports-ports
 
-A self-hosted [MacPorts](https://www.macports.org) port repository for [upkeep](https://github.com/teknikqa/upkeep). MacPorts has no "tap" concept like Homebrew, so this is a plain Portfile repo that you add as a local source.
+A self-hosted [MacPorts](https://www.macports.org) port repository for [teknikqa](https://github.com/teknikqa)'s apps, currently [upkeep](https://github.com/teknikqa/upkeep). MacPorts has no "tap" concept like Homebrew, so this is a plain Portfile repo that you add as a local source.
 
 ## Install
 
 1. Clone this repo somewhere permanent:
 
    ```bash
-   git clone https://github.com/teknikqa/macports-upkeep.git ~/.macports-upkeep
+   git clone https://github.com/teknikqa/macports-ports.git ~/.macports-ports
    ```
 
 2. Add it to `/opt/local/etc/macports/sources.conf`, **above** the `[default]` line:
 
    ```
-   file:///Users/<you>/.macports-upkeep
+   file:///Users/<you>/.macports-ports
    rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default]
    ```
 
@@ -26,11 +26,11 @@ A self-hosted [MacPorts](https://www.macports.org) port repository for [upkeep](
 ## Updating
 
 ```bash
-cd ~/.macports-upkeep && git pull
+cd ~/.macports-ports && git pull
 sudo port upgrade upkeep
 ```
 
-The `PortIndex` in this repo is regenerated automatically by CI whenever the `Portfile` changes, so a `git pull` is all you need locally — no manual `portindex` step.
+The `PortIndex` in this repo is regenerated automatically by CI whenever a `Portfile` changes, so a `git pull` is all you need locally — no manual `portindex` step.
 
 ## Troubleshooting
 
@@ -42,4 +42,4 @@ macportsuser root
 
 ## Maintenance
 
-The `Portfile`'s `version` and `checksums` are updated automatically by `upkeep`'s release workflow whenever a new tag is pushed.
+Each `Portfile`'s `version` and `checksums` are updated automatically by its app's release workflow whenever a new tag is pushed.
