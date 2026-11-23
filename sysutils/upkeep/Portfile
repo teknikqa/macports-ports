@@ -3,7 +3,7 @@
 PortSystem          1.0
 
 name                upkeep
-version             1.1.1
+version             1.1.2
 revision            0
 categories          sysutils
 platforms           darwin
@@ -49,14 +49,14 @@ distfiles           ${upkeep_distfile}
 #   sudo port -d checksum upkeep os.arch=arm build_arch=arm64
 if {${build_arch} eq {arm64}} {
     checksums       ${upkeep_distfile} \
-                    rmd160  6ef2cdd41274cd34d8cf14fd0f65b10949ac21e2 \
-                    sha256  570d2738d0068b08f2c90b6a22fe06f06ccfe406273021340d568f895719ad1d \
-                    size    3257315
+                    rmd160  05e286654699bfc3d587eddeeaa72a8a1ca78944 \
+                    sha256  be5d0e045d79e86dd5f77c9fed08d8c4736da52dccb609965b0117539b10623b \
+                    size    3257368
 } elseif {${build_arch} eq {x86_64}} {
     checksums       ${upkeep_distfile} \
-                    rmd160  4d082f5fb48fa38de9234c20ce52426648829352 \
-                    sha256  f136042270f25fb57430e74fba0a1a7f1e0bb9596bb19251a91e7c3fd09b958e \
-                    size    3524905
+                    rmd160  80b0ea03f2a11fccc6fecf04da8d8e1204a06df3 \
+                    sha256  03d2e70a6bd282c4c0e5b9e5dfb88de6253439d2e2cdb18276c8cf8d4fcff97a \
+                    size    3525972
 }
 
 # The tarball has no wrapping directory, so extracted files land directly
